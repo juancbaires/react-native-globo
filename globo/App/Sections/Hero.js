@@ -6,7 +6,7 @@ class Hero extends React.Component {
         return (
             <Image
                 style={styles.heroImage}
-                source={require('./Img/hero.jpg')}
+                source={require('./Img/laptop2.jpg')}
             />
         );
     }

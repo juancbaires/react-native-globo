@@ -18,7 +18,7 @@ class Header extends React.Component {
             <View style={styles.headStyle}>
                 <Image
                     style={styles.logoStyle}
-                    source={require('./Img/globoLogo.jpg')}
+                    source={require('./Img/Globo_logo_REV.png')}
                 />
 
 

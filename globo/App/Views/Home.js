@@ -1,6 +1,7 @@
 import React from "react"
 import Header from "../Sections/Header"
 import Hero from "../Sections/Hero"
+import Menu from '../Sections/Menu'
 import { View, Text, StyleSheet } from "react-native"
 
 
@@ -10,7 +11,7 @@ class Home extends React.Component {
             <View style={styles.container}>
                 <Header message='Press to login'></Header>
                 <Hero />
-                <Text style={{ flex: 6 }}>These other lines are here</Text>
+                <Menu />
             </View>
         )
     }
