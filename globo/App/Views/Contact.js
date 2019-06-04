@@ -26,9 +26,10 @@ class Contact extends Component {
         this.props.navigation.goBack()
     }
     render() {
+        const { navigate } = this.props.navigation
         return (
             <View style={styles.container}>
-                <Header message="press to login"></Header>
+                <Header navigate={navigate} message="press to login"></Header>
                 <Text style={styles.heading}>Contact Us</Text>
                 <TextInput
                     style={styles.inputs}

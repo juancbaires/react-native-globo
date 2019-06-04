@@ -14,7 +14,7 @@ class Home extends React.Component {
         const { navigate } = this.props.navigation
         return (
             <View style={styles.container}>
-                <Header message='Press to login'></Header>
+                <Header navigate={navigate} message='Press to login'></Header>
                 <Hero />
                 <Menu navigate={navigate} />
             </View>

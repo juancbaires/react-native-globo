@@ -1,6 +1,10 @@
 import React from 'react';
 import Home from './App/Views/Home.js'
 import Contact from './App/Views/Contact.js'
+import Video from './App/Views/Video'
+import VideoDetail from './App/Views/VideoDetail'
+import Register from "./App/Views/Register";
+import Login from "./App/Views/Login.js";
 import { createAppContainer, createStackNavigator } from 'react-navigation';
 
 const MyRoutes = createStackNavigator({
@@ -10,7 +14,18 @@ const MyRoutes = createStackNavigator({
   ContactRT: {
     screen: Contact
   },
-
+  LessonsRT: {
+    screen: Video
+  },
+  VideoDetailRT: {
+    screen: VideoDetail
+  },
+  RegisterRT: {
+    screen: Register
+  },
+  LoginRT: {
+    screen: Login
+  }
 })
 
 const AppContainer = createAppContainer(MyRoutes)

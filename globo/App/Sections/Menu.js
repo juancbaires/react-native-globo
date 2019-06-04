@@ -10,10 +10,10 @@ class Menu extends Component {
         return (
             <View style={styles.container}>
                 <View style={styles.buttonRow}>
-                    <TouchableOpacity style={styles.buttonStyles} onPress={this.onPress}>
+                    <TouchableOpacity style={styles.buttonStyles} onPress={() => { this.props.navigate('LessonsRT') }}>
                         <Text style={styles.buttonText}>Lessons</Text>
                     </TouchableOpacity>
-                    <TouchableOpacity style={styles.buttonStyles} onPress={this.onPress}>
+                    <TouchableOpacity style={styles.buttonStyles} onPress={() => { this.props.navigate("RegisterRT") }}>
                         <Text style={styles.buttonText}>Register</Text>
                     </TouchableOpacity>
                 </View>
@@ -33,7 +33,7 @@ class Menu extends Component {
                         <Text style={styles.buttonText}>About</Text>
                     </TouchableOpacity>
                 </View>
-            </View>
+            </View >
         );
     }
 }
