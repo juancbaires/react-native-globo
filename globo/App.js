@@ -7,6 +7,10 @@ import Register from "./App/Views/Register";
 import Login from "./App/Views/Login.js";
 import Quiz from './App/Views/Quiz'
 import Finish from './App/Views/QuizFinished'
+import Blog from './App/Views/Blog'
+import BlogDetail from "./App/Views/BlogDetail"
+import About from './App/Views/About'
+
 import { createAppContainer, createStackNavigator } from 'react-navigation';
 
 const MyRoutes = createStackNavigator({
@@ -33,6 +37,15 @@ const MyRoutes = createStackNavigator({
   },
   FinishRT: {
     screen: Finish
+  },
+  BlogRT: {
+    screen: Blog
+  },
+  BlogDetailRT: {
+    screen: BlogDetail
+  },
+  AboutRT: {
+    screen: About
   }
 })
 
