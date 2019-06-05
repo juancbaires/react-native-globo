@@ -5,6 +5,8 @@ import Video from './App/Views/Video'
 import VideoDetail from './App/Views/VideoDetail'
 import Register from "./App/Views/Register";
 import Login from "./App/Views/Login.js";
+import Quiz from './App/Views/Quiz'
+import Finish from './App/Views/QuizFinished'
 import { createAppContainer, createStackNavigator } from 'react-navigation';
 
 const MyRoutes = createStackNavigator({
@@ -25,6 +27,12 @@ const MyRoutes = createStackNavigator({
   },
   LoginRT: {
     screen: Login
+  },
+  QuizRT: {
+    screen: Quiz,
+  },
+  FinishRT: {
+    screen: Finish
   }
 })
 

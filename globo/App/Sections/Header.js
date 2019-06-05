@@ -9,7 +9,7 @@ class Header extends React.Component {
 
     toggleUser = () => {
         if (this.state.isLoggedIn) {
-            AsyncStorage.setItem('userLogginIn', 'none', (err, result) => {
+            AsyncStorage.setItem('userLoggedIn', 'none', (err, result) => {
                 this.setState({
                     isLoggedIn: false,
                     loggedUser: false
@@ -28,10 +28,11 @@ class Header extends React.Component {
                 console.log('none')
             }
             else if (result === null) {
-                AsyncStorage.setItem('userLoggedIn', (err, result) => {
+                AsyncStorage.setItem('userLoggedIn', 'none', (err, result) => {
                     console.log('Set user to none')
                 })
             } else {
+                console.log(this.state.isLoggedIn, this.state.result)
                 this.setState({
                     isLoggedIn: true,
                     loggedUser: result

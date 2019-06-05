@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import { Text, View, FlatList, Image, TouchableWithoutFeedback, Button } from "react-native";
 import { createStackNavigator } from "react-navigation";
-
 class Video extends Component {
 
     static NavigationOptions = {
@@ -13,7 +12,7 @@ class Video extends Component {
     }
     componentDidMount() {
 
-        return fetch("https://www.googleapis.com/youtube/v3/search?part=snippet&q=pluralsight&type=video&key=AIzaSyAXmft5gh7jEMDMTSl0qW948K61AoSlgCA")
+        return fetch(`https://www.googleapis.com/youtube/v3/search?part=snippet&q=pluralsight&type=video&key=`)
             .then(res => res.json()).then(resJSON => {
                 this.setState({
                     listLoaded: true,

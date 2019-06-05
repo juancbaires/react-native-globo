@@ -25,13 +25,11 @@ class Login extends Component {
         }
         else {
             AsyncStorage.getItem('userLoggedIn', (err, result) => {
-
                 if (result !== 'none') {
                     Alert.alert('Somebody is already logged in')
                     this.props.navigation.navigate('HomeRT')
                 }
                 else {
-
                     AsyncStorage.getItem(this.state.username, (err, result) => {
 
                         if (result !== null) {
@@ -40,12 +38,13 @@ class Login extends Component {
                                 Alert.alert('incorrect password')
                             }
                             else {
-                                AsyncStorage.setItem('userLoggedIn', (err, result) => {
+                                AsyncStorage.setItem('userLoggedIn', this.state.username, (err, result) => {
                                     Alert.alert(`${this.state.username} is Logged in`)
                                     this.props.navigation.navigate('HomeRT')
                                 })
                             }
-                        } else {
+                        }
+                        else {
                             Alert.alert(`No account for ${this.state.username}`)
                             this.props.navigation.navigate('HomeRT')
                         }
